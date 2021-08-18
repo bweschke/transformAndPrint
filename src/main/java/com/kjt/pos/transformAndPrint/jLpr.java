@@ -125,7 +125,7 @@ public class jLpr {
 	 */
 	public void printFile(String fileName, String hostName, String printerName,
 			String documentName) throws IOException, InterruptedException {
-		log.debug("Printing file...");
+		log.debug("Printing file..."+fileName);
 		String controlFile = "";
 		File f = null;
 		byte buffer[] = new byte[1000];
