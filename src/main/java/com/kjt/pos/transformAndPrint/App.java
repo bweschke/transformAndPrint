@@ -22,7 +22,14 @@ public class App
         //System.out.println( "Hello World!" );
     	try {
     		//jlpr.printFile(fileName, hostName, PASSTHRU);
-			jlpr.printFile(args[0].toString(), args[1].toString(), args[2].toString());
+    		int x = 0;
+    		while (x < Integer.parseInt(args[3].toString())) {
+    			jlpr.printFile(args[0].toString(), args[1].toString(), args[2].toString());
+    			x++;
+    		}
+    		if (args.length == 5) {
+    			jlpr.printFile(args[4].toString(), args[1].toString(), args[2].toString());    			
+    		}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			log.error("IO Exception from printer\n", e);
