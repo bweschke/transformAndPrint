@@ -26,9 +26,11 @@ public class App
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			log.error("IO Exception from printer\n", e);
+			System.exit(1);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			log.error("Interrupted Exception frmo printer\n", e);
+			System.exit(1);
 		}
     }
 }
