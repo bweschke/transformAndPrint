@@ -13,6 +13,7 @@ public class App
 {
 	
 	final static jLpr jlpr = new jLpr();
+	final static Jipp jipp = new Jipp();
 	
     public static void main( String[] args )
     {
@@ -23,12 +24,19 @@ public class App
     	try {
     		//jlpr.printFile(fileName, hostName, PASSTHRU);
     		int x = 0;
-    		while (x < Integer.parseInt(args[3].toString())) {
-    			jlpr.printFile(args[0].toString(), args[1].toString(), args[2].toString());
-    			x++;
-    		}
-    		if (args.length == 5) {
-    			jlpr.printFile(args[4].toString(), args[1].toString(), args[2].toString());    			
+    		if (args.length == 3) {
+	    		while (x < Integer.parseInt(args[2].toString())) {
+	    			jipp.printFile(args[1].toString(), args[0].toString());
+	    			x++;
+	    		}
+    		} else {	    		
+	    		while (x < Integer.parseInt(args[3].toString())) {
+	    			jlpr.printFile(args[0].toString(), args[1].toString(), args[2].toString());
+	    			x++;
+	    		}
+	    		if (args.length == 5) {
+	    			jlpr.printFile(args[4].toString(), args[1].toString(), args[2].toString());    			
+	    		}
     		}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
